@@ -244,7 +244,7 @@ $config_file = file_put_contents($config_file_name, $file_content);
             $disabled = true;
             }
             if (!extension_loaded('calendar')) {
-            $calendar = false;
+            $calendar = true;
             $disabled = false;
             }
             if (!extension_loaded('gd') && !function_exists('gd_info')) {
@@ -613,4 +613,5 @@ function Wo_SubmitButton() {
         border-color:#04abf2;
     }
 </style>
+
 
