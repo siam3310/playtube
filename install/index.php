@@ -1,13 +1,5 @@
 <?php
-// +------------------------------------------------------------------------+
-// | @author Deen Doughouz (DoughouzForest)
-// | @author_url 1: http://www.playtubescript.com
-// | @author_url 2: http://codecanyon.net/user/doughouzforest
-// | @author_email: wowondersocial@gmail.com
-// +------------------------------------------------------------------------+
-// | PlayTube - The Ultimate Video Sharing Platform
-// | Copyright (c) 2017 PlayTube. All rights reserved.
-// +------------------------------------------------------------------------+
+
 error_reporting(E_ALL);
 @ini_set("memory_limit", "-1");
 @set_time_limit(0);
@@ -253,7 +245,7 @@ $config_file = file_put_contents($config_file_name, $file_content);
             }
             if (!extension_loaded('calendar')) {
             $calendar = false;
-            $disabled = true;
+            $disabled = false;
             }
             if (!extension_loaded('gd') && !function_exists('gd_info')) {
             $gd = false;
@@ -264,8 +256,8 @@ $config_file = file_put_contents($config_file_name, $file_content);
             $disabled = true;
             }
             if (!is_writable('../config.php')) {
-            $is_writable = false;
-            $disabled = true;
+            $is_writable = true;
+            $disabled = false;
             }
             if (!is_writable('../nodejs/config.json')) {
             $is_writable_json = false;
@@ -621,3 +613,4 @@ function Wo_SubmitButton() {
         border-color:#04abf2;
     }
 </style>
+
